@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+@font-face {
+    font-family: OpenSans-CondLight; /* имя шрифта для CSS правил */
+    src: local("OpenSans-CondLight"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/OpenSans-CondLight.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+@font-face {
+    font-family: OpenSans-CondBold; /* имя шрифта для CSS правил */
+    src: local("OpenSans-CondBold"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/OpenSans-CondBold.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+@font-face {
+    font-family: Impact; /* имя шрифта для CSS правил */
+    src: local("Impact"), /* проверяем наличие шрифта в ОС пользователя */
+         url(../fonts/Impact.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+  }
+
+body {font-family: OpenSans-CondLight; position: relative; color:#333; margin:0;}
+
+a {color:#4675c3; text-decoration:none; border-bottom:1px dotted #90acdb; line-height:22px;}
+a:hover {opacity: 0.8;border-bottom:1px solid #90acdb;}
+
+#maindiv {margin:0 auto; width:1000px;}
+#heading { display:block;}
+#logo { width:255px; height:75px; float:left; background: url(../images/logo.jpg) top no-repeat; margin-top:20px;}
+#arrowtop {height:75px; width:70px; float:left; background: url(../images/arrow-top.jpg) top no-repeat; margin:20px 0; }
+#phone {float:left; width:180px; font-size:25px; line-height:25px; margin:30px 0; height:75px; }
+#txttop {float:left; width:240px; font-size:21px; text-transform:uppercase; font-family:OpenSans-CondBold; line-height:25px; margin:30px 0; height:75px;}
+
+#callback a {font-size:18px;margin-top:23px;float:right; border-radius:10px; background-color:#4675c3; color:#FFF; text-align:center; text-decoration:none; padding:9px 18px; display:block; border:none; letter-spacing:-1px;}
+#btn a { margin:28px 0; float:left ; font-size:20px; width:155px; border-radius:7px; background-color:#df292d; color:#FFF; text-align:center; text-decoration:none; padding:12px; display:block; border:none;}
+
+
+
+#topslider { clear:both; height:700px; width:100%; height:644px; margin-top:-25px;  padding:0;}
+
+#scontent { position:absolute; z-index:6; text-align:center;}
+#two { width:190px; left: 380px;font-size:25px; padding:25px 20px; text-transform:uppercase; text-align:center; color:#FFF !important; border:1px solid #FFFFFF; margin:35px 375px;}
+#sltitle { font:55px Impact; color:#FFF; text-transform:uppercase; text-align:center; top: 45px; margin:25px 0; }
+#slsub { text-transform:uppercase; font-size: 25px; color:#FFF; margin:-15px 0;}
+
+#pluses { width:987px; height:157px; background:url(../images/bg-pluses.png) top center no-repeat; z-index:9; margin:-10px 0; position:absolute;}
+#ptxt { font-size:19px; font-style:italic; text-transform:uppercase; color:#000;float:left;}
+#ptxt2 { font-size:18px; font-family: OpenSans-CondBold; text-transform:uppercase; color:#FFF; float:left;}
+
+h1 { font:35px Impact; text-transform:uppercase; color:#000; text-align:center;}
+#lines { width:200px; height:5px; background-color:#006fa8; margin:-10px auto;}
+
+#foods { border-bottom: 1px dotted #CCC; height:550px;}
+#item { width:480px; height:550px; float:left; margin:55px 0; }
+#item p { font-size:18px;}
+#imgs { width:165px; height:550px; float: left;}
+#imgs img { border:1px solid #4675c3; border-radius:5px; margin-bottom:10px;}
+#item #txt { padding-right:25px;}
+#item #txt h2 { font:25px OpenSans-CondBold; text-transform:uppercase; color:#000; margin:0; }
+#item #txt h3  {font:20px OpenSans-CondBold; color:#000; margin:25px 0 10px 0;}
+#emka { font-style:italic; font-size:16px !important;}
+
+#logos { height:113px; width:auto; margin:0; float:left;}
+
+#btnblue a {font-size:18px;margin-top:23px;float:right; border-radius:10px; color:#006fa8; text-align:center; text-decoration:none; padding:9px 18px; display:block; border:1px solid #006fa8; letter-spacing:-1px;}
+#btnblue a:hover { background-color:#006fa8; color: #FFF;}
+
+
+
+/* Контакт */
+#slform {margin:25px 315px;}
+#letter, #letter2, #letter3 { width: 250px; height: 46px;
+text-align:center;
+background-color:#df292d;
+border-radius:10px;
+border:none;
+font-size: 18px;
+padding-top:5px;
+margin-left:55px;
+color:#FFF;
+text-transform:uppercase;
+cursor:pointer;
+float:left;
+font-family: OpenSans-CondBold;}
+
+#letter:hover {
+opacity:0.8;}
+
+#botname, #botmail, #bottel,#bottel2,#bottel3 {
+display:block;
+width:340px; height:58px;
+border:3px solid #000;
+color:#000;
+font-family: OpenSans-CondLight;
+font-size: 26px;
+letter-spacing:-2px;
+text-align:center;
+border-radius:27px;
+font-style:italic;
+margin:5px;
+opacity:0.8;
+
+}
+#botname { background: url(../images/icon-name.png) 15px 11px no-repeat #FFF;}
+#bottel,#bottel2,#bottel3 { background: url(../images/icon-tel.png) 15px 11px no-repeat #FFF;}
+#botmail{ background: url(../images/icon-mail.png) 20px 16px no-repeat #FFF;}
+#botmes {
+display:block;
+width:340px; height:88px;
+border:3px solid #000;
+color:#000;
+font-family: OpenSans-CondLight;
+font-size: 26px;
+letter-spacing:-2px;
+text-align:center;
+border-radius:27px;
+font-style:italic;
+margin:5px;
+opacity:0.8;
+}
+input, textarea {border:solid 1px transparent; outline:none; background-color:none;}
+#botname:hover, #bottel:hover,#bottel2:hover,#bottel3:hover,#botname:active, #bottel:active, #bottel2:active, #bottel3:active  {opacity:1;}
+#copyright { width: auto; height: 50px; text-align:center; clear:both; display:block;}
+
+
+/* СЛАЙДЕР CSS */
+#section { margin:0; padding:0; position:relative;}
+#slider { width:100%; height:644px; z-index:1;}
+
+
+#control {}
+.sli-links {list-style:none; width:100px; height:30px; position:absolute; z-index:5; top:565px; margin-left:48%; text-align:center; text-indent:-9999px;}
+.sli-links .control-slide {float:left; width:29px; height:29px; background: url(../images/point.png) top center no-repeat; text-align:center; text-decoration:none; color:#666;}
+.sli-links .control-slide:hover, .sli-links .control-slide.active { cursor:pointer; background: url(../images/point-active.png) top center no-repeat;}
+
+#count { display:none;}
+#firstline { width:333px;}
+#secline { width: auto; min-width:227px; font-size:16px; margin:20px 0;}
+	
+	
+#prewbutton, #nextbutton { /* Ссылка "Следующий" и "Педыдущий" */
+	display:block;
+	z-index:3;
+	width:84px;
+	height:100%;
+	position:absolute;
+	cursor:pointer;
+	border:none;
+	top:-25px;
+	overflow:hidden;
+	text-indent:-999px;
+	background:url(../images/arrow-slider-left.png) right center no-repeat;;
+	opacity:0.8;
+	outline:none !important;}
+#prewbutton{left:40px;}
+#nextbutton{right:40px;
+	background: url(../images/arrow-slider-right.png) right center no-repeat;}
+#prewbutton:hover, #nextbutton:hover{
+	opacity:1;}
+	
+	
+/* Стили Поп Апа*/
+.popup {
+font-family:OpenSans-CondBold;
+font-size: 14px;
+text-align:center;
+padding:5px 15px 15px;
+position:fixed;
+top:120px;
+left:50%;
+display:none;
+overflow:hidden;
+border:1px solid #ccc;
+background:#FFF;
+-moz-border-radius:15px;
+-webkit-border-radius:15px;
+border-radius:15px;
+z-index:100;
+behavior: url(PIE.htc);
+}
+
+.popup a.close, .popup a.close2, .popup a.close3 {
+width:16px;
+height:16px;
+display:block;
+text-indent:-9999px;
+position:absolute;
+top:10px;
+right:10px;
+background:url(../images/close.png) no-repeat;
+border: none;
+}
+
+#green { color:green;}
+#red { color: red;}
+ 
+#overlay {
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+display:none;
+background:#000;
+opacity:.8;
+z-index:99;
+}
+
+#overlay2 {
+width:100%;
+height:100%;
+position:fixed;
+top:0;
+left:0;
+display:none;
+background:#000;
+opacity:.8;
+z-index:99;
+}

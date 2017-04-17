@@ -1,0 +1,571 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Schrack Technik - поставка реле по всей России</title>
+<meta name="description" content="Доставка по всей России реле производства Schrack Technik в кратчайшие сроки" />
+<meta name="keywords" content="реле, поставка реле, реле schrack" />
+<link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<script type="text/javascript" src="js/smooth.js"></script>
+<script type="text/javascript" src="js/tel.js"></script>
+
+
+<!-- Отправка без перезагрузки-->
+<script type="text/javascript">
+            function AjaxFormRequest(form1,url) {
+				var formData = new FormData(jQuery("#"+form1).get(0));
+                jQuery.ajax({ 
+                    url:     "send.php", //Адрес подгружаемой страницы 
+                    type:     "POST", //Тип запроса 
+                    dataType: "json", //Тип данных 
+                    data: formData,
+					contentType: false,
+					processData: false,
+                    success: function(response) { //Если все нормально
+						if(response == ""){
+							$('div.reg_form').fadeIn(500);
+						}
+						else{
+							$('div.wrongs').find("h2").html("<span id='red'>"+response+"</span>");
+							$('div.wrongs').fadeIn(500);
+						}
+						$("body").append("<div id='overlay'></div>");
+						$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+					}, 
+					error: function(response) { //Если ошибка 
+						$('div.wrongs').find("h2").html("<span id='red'>"+response+"</span>");
+						$('div.wrongs').fadeIn(500);
+						$("body").append("<div id='overlay'></div>");
+						$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+					} 
+				 }); 
+			}
+</script>
+
+<!-- Отправка без перезагрузки-->
+<script type="text/javascript">
+            function AjaxFormRequest2(form2,url) { 
+                jQuery.ajax({ 
+                    url:     "send2.php", //Адрес подгружаемой страницы 
+                    type:     "POST", //Тип запроса 
+                    dataType: "html", //Тип данных 
+                    data: jQuery("#"+form2).serialize(),  
+                    success: function(response){ //Если все нормально 
+						document.getElementById(result_id).innerHTML = response;
+					}, 
+					error: function(response) { //Если ошибка 
+						document.getElementById(result_id).innerHTML = "Ошибка при отправке формы"; 
+					}
+             }); 
+        }
+</script>
+
+<!-- Отправка без перезагрузки-->
+<script type="text/javascript">
+            function AjaxFormRequest3(form3,url) { 
+                jQuery.ajax({ 
+                    url:     "send3.php", //Адрес подгружаемой страницы 
+                    type:     "POST", //Тип запроса 
+                    dataType: "html", //Тип данных 
+                    data: jQuery("#"+form3).serialize(),  
+                    success: function(response) { //Если все нормально 
+                    document.getElementById(result_id).innerHTML = response; 
+                }, 
+                error: function(response) { //Если ошибка 
+                document.getElementById(result_id).innerHTML = "Ошибка при отправке формы"; 
+                } 
+             }); 
+        }
+</script>
+
+<script language="JavaScript">
+ <!-- 
+function isValidEmailAddress ( str )  {
+//   проверяет  не осталось ли поле пустым 
+if (str == " ") { 
+alert ("Введите e-mail, пожалуйста.") 
+return false 
+} 
+//   проверяет наличи  '@' 
+else if ( str. indexOf ( "@" , 4) == -1 ) { 
+alert("Error: Вы внесли  " + str + ". Ваш электронный адрес не содержит в себе '@' ." ) ; 
+return false 
+} 
+ //  проверяет наличие 'точки'
+else if ( str. indexOf ( "." , 7) == -1 ) { 
+alert("Error:  Вы внесли " + str + ". Ваш электронный адрес не содержит в себе '.' ." ) ; 
+return false 
+}
+return true 
+}
+--></script>
+
+<script type="text/javascript">
+$(function openPopupWin() {
+	$('#letter').click(function () {
+	
+		valid = true;
+ 		if ( document.form1.tel.value == "Введите телефон") {
+		$('div.wrongs').fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+		return true;}
+			
+		else {
+			AjaxFormRequest('form1', 'send.php');
+			return false;
+		}			
+	});
+	
+	$('#letter2').click(function () {
+	
+		valid = true;
+ 		if ( document.form2.tel2.value == "Телефон") {
+		$('div.wrongs2').fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+		return true;}
+			
+		else {
+		AjaxFormRequest2('form2', 'send2.php');
+		$('div.reg_form2').fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+		return false;
+		
+			}			
+	});
+	
+	$('#letter3').click(function () {
+	
+		valid = true;
+ 		if ( document.form3.tel3.value == "Введите телефон") {
+		$('div.wrongs3').fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+		return true;}
+			
+		else {
+		AjaxFormRequest3('form3', 'send3.php');
+		$('div.reg_form3').fadeIn(500);
+		$("body").append("<div id='overlay'></div>");
+		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
+		return false;
+		
+			}			
+	});
+	
+	$('a.close').click(function () {
+		$(this).parent().fadeOut(100);
+		$('#overlay').remove('#overlay');
+		return false;
+	});
+	$('a.close2').click(function () {
+		$(this).parent().fadeOut(100);
+		return false;
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+<div id="maindiv">
+	<div id="heading">
+    	<div id="logo"></div>
+      	<div id="arrowtop"></div>
+        <div id="txttop">Поставляем реле Schrack<br />по всей России!</div>
+        <div id="arrowtop"></div>
+        <div id="phone">8 812 336 60 38<br /><span style=" font-size:20px;">Звоните - поможем!</span></div>
+        <div id="btn"><a href="#" class="show_popup" rel="calling">Обратный звонок</a></div>
+    </div>
+</div>
+
+<!-- Слайдер -->
+<div id="topslider" style=" position:relative;">
+<div id="maindiv">
+<div id="scontent">
+	<div id="two">2 года гарантии</div>
+    <div id="sltitle">Реле schrack<br />с доставкой по всей россии</div>
+    <div id="slsub">Заявка на бесплатную консультацию</div>
+    <div id="slform">
+    	<form name="form3" id="form3" method="get" action="send3.php">
+        	<input type="text" value="Введите Ваше имя" class="style" name="name3" size="15" id="botname" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите Ваше имя';"/>
+			<input type="text" value="Введите телефон" class="style" name="tel3" maxlength="12"  size="18" id="bottel3" onkeyup="validPhone3()" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите телефон';"/>
+			<input type="button" value="Отправить заявку" onclick="openPopupWin()" name="popupWin" id="letter3"><a rel="reg_form"></a></input>
+        </form>
+    </div>
+</div>
+</div>
+
+<div id="nextbutton"></div><div id="prewbutton"></div>
+<div id="section" class="section">
+		<div id="slider" style="background: url(images/img-1.jpg) top center " class="slide"> </div>
+        <div id="slider" style="background: url(images/img-2.jpg) top center " class="slide"> </div>
+</div>
+<div class="sli-links" id="control"><span class="control-slide active"></span><span class="control-slide"></span></div>
+</div>
+
+<div id="maindiv" style=" position:relative;">
+	<div id="pluses">
+    	<div id="ptxt" style=" margin:30px 82px;">Поставка от 1 шт.</div>
+        <div id="ptxt" style=" margin:30px 15px;">складская программа</div>
+        <div id="ptxt" style=" margin:30px 85px;">приемлимые цены</div>
+        <div id="ptxt" style=" margin:30px 25px ;">бесплатная отправка</div>
+         <div id="ptxt2" style=" margin:25px 85px;">постоянные скидки в зависимости от заказа</div>
+        <div id="ptxt2" style=" margin:25px 25px ;">предоставление полных каталогов продукции</div>
+      
+    </div>
+</div>
+
+<div id="maindiv" style=" clear:both; ">
+	<h1 style=" margin-top:185px;">ассортимент реле</h1>
+    <div id="lines"></div>
+    <div id="foods">
+    
+    	<div id="item" style="background:url(images/bg-line.jpg) top right no-repeat; margin-right:40px;">
+        	<div id="imgs"><img src="images/rele-1.jpg" /><a href="#" class="show_popup" rel="rele1">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Силовые реле серии RT </h2>
+                <p>Серия RT1 - Одна из самых популярных серий Schrack реле с током коммутации до 16А.  Обмотки этих реле могут управляться как постоянным так и переменным током. Все типы реле серии RT могут комплектоваться специальным держателем на Дин рейку.</p>
+                <h3>Основные параметры</h3>
+                <p id="emka">— Размеры = 29x12.7x15.7мм.<br />
+— Макс. ток коммутации = 12A (VDC)<br />
+— Макс. ток коммутации = 16A (VAC)<br />
+— Макс. напряжение коммутации = 240VAC <br />                
+— Температурный диапазон =
+      от -40 до +85 С (VDC)<br />
+— Температурный диапазон =
+      от -40 до +70 С (VAC) <br />      
+— Напряжения обмоток = от 5VDC до 110VDC<br />
+      и от 24VAC до 230VAC 
+Схемы переключения = 1CO/1NO</p>
+</p>
+            </div>
+        </div>
+        
+        <div id="item">
+        	<div id="imgs"><img src="images/rele-2.jpg" /><a href="#" class="show_popup" rel="rele2">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Реле РТ для установки на панель </h2>
+                <h3>Основные параметры</h3>
+                <p id="emka">— 2 пол. 12 A / 3 пол. 10 A / 4 пол. 6 A = +20% отключающей способности<br />
+— Температура  окр. среды 70°C для пост. и перем. тока<br />
+— Уменьшенная  высота (29 мм -20% по сравн. с ZT)<br />
+— Контакты без содер. кадмия, возм. позолоченные<br />
+— C 250 для 3х-полюсной версии, также для смонтированного в цоколе<br />
+— Мех. (стандарт) или светодиодный (опц.) индикатор<br />
+— Полностью автоматизированное производство<br />
+— Отсутствие соединительных проводов в реле<br />
+— Отсутствие точек пайки / сварки в зоне контактов<br />
+— Сертификаты VDE, CULUS, Lloyds</p>
+</p>
+            </div>
+        </div>
+
+</div>
+
+    <div id="foods">
+    
+    	<div id="item" style="background:url(images/bg-line.jpg) top right no-repeat; margin-right:40px; margin-top:-55px;">
+        	<div id="imgs"><img src="images/rele-3.jpg" /><a href="#" class="show_popup" rel="rele3">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Тонкое интерфейсное реле SNR</h2>
+                <p>Тонкие реле с током коммутации до 6А.  Реле отличается своей небольшой толщиной и относительно большим током коммутации. Реле может комплектоваться специальным держателем на Дин рейку.</p>
+                <h3>Основные параметры</h3>
+                <p id="emka">— Макс. ток коммутации = 6А<br />
+— Макс. напряжение коммутации = 240VAC  <br />               
+— Температурный диапазон = от -40 до +85 С <br />                
+— Напряжения обмоток = от 5VDC до 60VDC<br />
+— Схемы переключения = 1CO/1NO      <br />    
+— Чувствительность катушки 170 мВт<br />
+— Напряжение 12, 24 В пост. тока, 115, 230 В пост./пер. тока<br />
+— Контакты без содержания кадмия</p>
+</p>
+            </div>
+        </div>
+        
+        <div id="item" style=" margin-top:-55px;">
+        	<div id="imgs"><img src="images/rele-4.jpg" /><a href="#" class="show_popup" rel="rele4">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Силовые реле серии RM</h2>
+                <h3>Основные параметры</h3>
+                <p id="emka">— 1-3 НО или НЗ контакта<br />
+— Версии для 10-30 A<br />
+— Катушка переменного и постоянного тока<br />
+— Прямой монтаж на DIN-рейку<br />
+— Монтажная пластина<br />
+— Версия для печатных плат<br />
+— Faston AMP187/250<br />
+— Тест-кнопка<br />
+— Механический и электрический индикатор (светодиод)</p>
+</p>
+            </div>
+        </div>
+
+</div>
+
+    <div id="foods" style="margin-bottom:35px; border:none;">
+    
+    	<div id="item" style="background:url(images/bg-line.jpg) top right no-repeat; margin-right:40px; margin-top:-55px;">
+        	<div id="imgs"><img src="images/rele-5.jpg" /><a href="#" class="show_popup" rel="rele5">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Многорежимные реле серии МТ </h2>
+                 <h3>Основные параметры</h3>
+                <p id="emka">— 2 переключающих контакта, 10 А / 2 C/O, 10 A<br />
+— 3 переключающих контакта, 10 А / 3 C/O, 10 A<br />
+— Ном. отключающая способность 2500 ВА<br />
+— Катушка постоянного и переменного тока Механ. и электр. (возм. светодиодный) индикатор<br />
+— Контакты без содержания кадмия <br />
+— Новая система теста с тест-кнопкой и встроенно блокировкой<br />
+— Класс изоляции VDE 0110/C250   </p>
+</p>
+            </div>
+        </div>
+        
+        <div id="item" style=" margin-top:-55px;">
+        	<div id="imgs"><img src="images/rele-6.jpg" /><a href="#" class="show_popup" rel="rele6">Увеличить фотографию</a></div>
+            <div id="txt">
+            	<h2>Серия RP 3 SL</h2>
+                <p>Силовое реле для цепей с пиковыми нагрузками тока до 120А в течение 20ms</p>
+                <h3>Основные параметры</h3>
+                <p id="emka">— Размеры =  29x12.6x25.5мм.<br />
+— Макс. ток коммутации = 16А  <br />
+— Макс. напряжение коммутации = 240VAC<br />
+— Температурный диапазон = от -40C до +70C<br />
+— Напряжения обмоток = от 5VDC до 110VDC<br />
+— Схемы переключения = 1NO</p>
+</p>
+            </div>
+        </div>
+
+</div>
+
+</div>
+
+
+<div id="maindiv" style=" background:url(images/bg-logo.jpg) top center no-repeat; height:277px;">
+	<h1 style="">более 200 выполненных проектов</h1>
+	<div id="logos" style=" margin-left: 50px; "><img src="images/logo-1.png" /></div>
+    <div id="logos"><img src="images/logo-2.png" /></div>
+    <div id="logos"><img src="images/logo-3.png" /></div>
+    <div id="logos"><img src="images/logo-4.png" /></div>
+	
+</div>
+
+<div id="maindiv" style=" margin:35px auto;">
+	<div style="width:600px; float: left; height:600px;">
+    	<h1>Подберем аналог<br />и сделаем расчет</h1>
+        <div id="lines"></div>
+        <div style=" height:350px; width:100%; margin:45px 0;">
+        	<div style=" width:272px; float: left;">
+                <div><img src="images/logo-5.jpg" /></div>
+                <div><img src="images/logo-6.jpg" /></div>
+                <div><img src="images/logo-7.jpg" /></div>
+                <div><img src="images/logo-8.jpg" /></div>
+            </div>
+            <div style=" float: left; padding-top:5px;"><img src="images/skobka.jpg" /></div>
+			<div style=" float: left; padding-top:155px;"><img src="images/logo.jpg" /></div>
+        </div>
+    </div>
+    <div style=" width:400px;float: left;height:600px;">
+    	<h1>продукция<br />сертифицирована</h1>
+        <div id="lines"></div>
+        <div style=" margin:35px 0; text-align:center;">Нажимте, чтобы увеличить сертификат</div>
+<a href="#" class="show_popup" rel="sert" style=" border:none; text-decoration:none;"><img src="images/sert.jpg" style=" margin:-25px 0 0 80px;"/></a>
+    </div>
+</div>
+
+<div id="map" style=" position:relative; width:100%; height:580px; clear:both;">
+<div id="maindiv" style=" position:relative;z-index:2;">
+	<div id="btnblue" style=" position:absolute; top:-35px; left:43%;"><a href="#" class="show_popup" rel="calling">Остались вопросы?</a></div>
+    <div style=" position:absolute; left:-35px; top:170px; z-index:3;"> <img src="images/box.png" /></div>
+</div>
+	
+<div id="maindiv" style=" margin:35px auto; height:530px;background: url(images/map.jpg) bottom center no-repeat;position:relative; z-index:1;">
+		
+		<h1 style=" padding-top:65px;">ПОСТАВКА <span style=" color:#006fa8;">ОТ 1 ДНЯ</span> ПО ВСЕЙ РОССИИ</h1>
+        <div id="lines"></div>
+</div>
+</div>
+
+<div id="maindiv" style=" height:600px; background:url(images/bg-footer.jpg) 45px 75px no-repeat;">
+	<h1>оставьте заявку <span style=" color:#006fa8;">и получите скидку</span></h1>
+    <div id="lines" style=" margin-bottom:45px;"></div>
+    <div style=" text-align:center; color:#df292d; font-style:italic;">Все поля обязательны для заполнения!</div>
+    <div id="slform">
+    	<form enctype="multipart/form-data" name="form1" id="form1" method="get" action="send.php">
+        	<input type="text" value="Введите Ваше имя" class="style" name="name" size="15" id="botname" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите Ваше имя';"/>
+			<input type="text" value="Введите телефон" class="style" name="tel" size="18" maxlength="12"  id="bottel" onkeyup="validPhone()" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите телефон';"/>
+            <input type="text" value="Введите e-mail" class="style" name="email" size="18" id="botmail" onChange="isValidEmailAddress(this.value)" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите e-mail';"/>
+            <textarea name="mess" class="style" rows="4" cols="16" id="botmes" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Ваши примечания к заявке';">Ваши примечания к заявке</textarea>
+            <input name="attachfile" type="file" style="padding: 6px 0 12px 90px;">
+            <br />
+			<div style=" font-style:italic; font-size:16px; text-align:center; margin:-5px 0 10px 0;">Можете загружать файлы формата: *doc, *pdf, *xsl и пр.</div>
+            
+			<input type="button" value="Отправить заявку" onclick="openPopupWin()" name="popupWin" id="letter"><a rel="reg_form"></a></input>
+            <input class="form-control" data-required="true" id="orderModalPhoneMasked" name="url" type="hidden" value="">
+            <script>document.querySelector('input[name="url"]').value=location.href.substr(1);</script>
+            
+        </form>
+
+    </div>
+</div>
+
+<div id="maindiv" style=" background:url(images/bg-copyright.jpg) top center no-repeat; padding-top:35px; text-align:center; height:80px;">
+РЕЛЕ SCHRUCK © COPYRIGHT
+</div>
+
+<div class="popup rele1" style="margin-left:-180px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">СИЛОВЫЕ РЕЛЕ СЕРИИ RT</div>
+<img src="images/rele-1-big.jpg" />
+</div>
+
+<div class="popup rele2" style="margin-left:-180px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">РЕЛЕ РТ ДЛЯ УСТАНОВКИ НА ПАНЕЛЬ</div>
+<img src="images/rele-2-big.jpg" />
+</div>
+
+<div class="popup rele3" style="margin-left:-180px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">ТОНКОЕ ИНТЕРФЕЙСНОЕ РЕЛЕ SNR</div>
+<img src="images/rele-3-big.jpg" />
+</div>
+
+<div class="popup rele4" style="margin-left:-180px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">СИЛОВЫЕ РЕЛЕ СЕРИИ RM</div>
+<img src="images/rele-4-big.jpg" />
+</div>
+
+<div class="popup rele5" style="margin-left:-180px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">МНОГОРЕЖИМНЫЕ РЕЛЕ СЕРИИ МТ</div>
+<img src="images/rele-5-big.jpg" />
+</div>
+
+<div class="popup rele6" style="margin-left:-150px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">СЕРИЯ RP 3 SL</div>
+<img src="images/rele-6-big.jpg" />
+</div>
+
+<div class="popup sert" style="margin-left:-250px; padding: 15px;">
+<a class="close" href="#" >Close</a>
+<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">Сертификат соотвествия</div>
+<img src="images/sert-big.jpg" />
+</div>
+
+
+<div class="popup reg_form" style=" margin:155px -200px; width:350px; ">
+	<a class="close" href="#">Close</a>
+	<h2><span id="green">Отправлено успешно!</span><br />Спасибо за Вашу заявку!<br /> C Вами свяжется менеджер!</h2>
+</div>
+<div class="popup wrongs" style=" margin:155px -200px; width:350px; ">
+	<a class="close" href="#">Close</a>
+	<h2><span id="red">Ошибка отправки!</span><br />Вы не ввели номер телефона!</span></h2>
+</div>
+<div class="popup numbers" style=" margin:155px -200px; width:350px; ">
+	<a class="close" href="#">Close</a>
+	<h2><span id="red">Ошибка ввода!</span><br />Введите телефон цифрами!</span></h2>
+</div>
+<div class="popup email" style=" margin:155px -200px; width:350px; ">
+	<a class="close" href="#">Close</a>
+	<h2><span id="red">Ошибка ввода!</span><br />Введите правильный e-mail!</span></h2>
+</div>
+
+<div class="popup reg_form2" style=" margin:320px -210px; width:375px; ">
+	<a class="close2" href="#">Close</a>
+	<h2><span id="green">Отправлено успешно!</span><br />Спасибо за Вашу заявку!<br /> C Вами свяжется эксперт!</h2>
+</div>
+<div class="popup wrongs2" style=" margin:320px -210px; width:375px; ">
+	<a class="close2" href="#">Close</a>
+	<h2><span id="red">Ошибка отправки!</span><br />Вы не ввели номер телефона!</span></h2>
+</div>
+<div class="popup numbers2" style=" margin:320px -210px; width:375px; ">
+	<a class="close2" href="#">Close</a>
+	<h2><span id="red">Ошибка ввода!</span><br />Введите телефон цифрами!</span></h2>
+</div>
+
+
+
+<div class="popup reg_form3" style=" margin:320px -210px; width:375px; ">
+	<a class="close3" href="#">Close</a>
+	<h2><span id="green">Отправлено успешно!</span><br />Спасибо за Вашу заявку!<br /> C Вами свяжется эксперт!</h2>
+</div>
+<div class="popup wrongs3" style=" margin:320px -210px; width:375px; ">
+	<a class="close3" href="#">Close</a>
+	<h2><span id="red">Ошибка отправки!</span><br />Вы не ввели номер телефона!</span></h2>
+</div>
+<div class="popup numbers3" style=" margin:320px -210px; width:375px; ">
+	<a class="close3" href="#">Close</a>
+	<h2><span id="red">Ошибка ввода!</span><br />Введите телефон цифрами!</span></h2>
+</div>
+
+<div class="popup calling" style="margin-left:-210px;width:375px;">
+<a class="close" href="#" >Close</a>
+	<div style="font:18px OpenSans-CondBold; text-transform:uppercase; margin:25px 0;">Заказать обратный звонок</div>
+ <form name="form2" id="form2" method="get" action="send2.php">
+        	<input type="text" value="Ваше Имя" class="style" name="name2" size="15" id="botname" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Ваше Имя';" style="margin:0 10px;"/>
+			<input type="text" value="Телефон" class="style" name="tel2" size="12" maxlength="12" id="bottel2" onkeyup="validPhone2()" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Телефон';" style="margin:5px 10px;"/>
+			<input type="button" value="Отправить заявку" onclick="openPopupWin()" name="popupWin" id="letter2" style="margin:5px 65px;"></input>
+        </form>
+</div>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter36032710 = new Ya.Metrika({
+                    id:36032710,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/36032710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75043849-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+<!-- BEGIN cloudim code {literal} -->
+<script type="text/javascript" charset="utf-8">document.write(unescape("%3Cdiv id='cloudim_widget'%3E%3Cscript src='//static.cloudim.ru/js/chat.js' type='text/javascript'%3E%3C/script%3E%3C/div%3E"));</script> <div id="cloudim_cr" style="position:absolute; left:-9999px;"><a target="_blank" href="http://cloudim.ru/">Cloudim</a> - онлайн консультант для сайта бесплатно.</div>
+<script type="text/javascript" charset="utf-8">
+Cloudim.Chat.init({uid:1079});
+</script>
+<!-- {/literal} END cloudim code -->
+
+
+</body>
+</html>
