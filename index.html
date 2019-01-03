@@ -7,171 +7,6 @@
 <meta name="keywords" content="реле, поставка реле, реле schrack" />
 <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
-<script type="text/javascript" src="js/popup.js"></script>
-<script type="text/javascript" src="js/smooth.js"></script>
-<script type="text/javascript" src="js/tel.js"></script>
-
-
-<!-- Отправка без перезагрузки-->
-<script type="text/javascript">
-            function AjaxFormRequest(form1,url) {
-				var formData = new FormData(jQuery("#"+form1).get(0));
-                jQuery.ajax({ 
-                    url:     "send.php", //Адрес подгружаемой страницы 
-                    type:     "POST", //Тип запроса 
-                    dataType: "json", //Тип данных 
-                    data: formData,
-					contentType: false,
-					processData: false,
-                    success: function(response) { //Если все нормально
-						if(response == ""){
-							$('div.reg_form').fadeIn(500);
-						}
-						else{
-							$('div.wrongs').find("h2").html("<span id='red'>"+response+"</span>");
-							$('div.wrongs').fadeIn(500);
-						}
-						$("body").append("<div id='overlay'></div>");
-						$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-					}, 
-					error: function(response) { //Если ошибка 
-						$('div.wrongs').find("h2").html("<span id='red'>"+response+"</span>");
-						$('div.wrongs').fadeIn(500);
-						$("body").append("<div id='overlay'></div>");
-						$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-					} 
-				 }); 
-			}
-</script>
-
-<!-- Отправка без перезагрузки-->
-<script type="text/javascript">
-            function AjaxFormRequest2(form2,url) { 
-                jQuery.ajax({ 
-                    url:     "send2.php", //Адрес подгружаемой страницы 
-                    type:     "POST", //Тип запроса 
-                    dataType: "html", //Тип данных 
-                    data: jQuery("#"+form2).serialize(),  
-                    success: function(response){ //Если все нормально 
-						document.getElementById(result_id).innerHTML = response;
-					}, 
-					error: function(response) { //Если ошибка 
-						document.getElementById(result_id).innerHTML = "Ошибка при отправке формы"; 
-					}
-             }); 
-        }
-</script>
-
-<!-- Отправка без перезагрузки-->
-<script type="text/javascript">
-            function AjaxFormRequest3(form3,url) { 
-                jQuery.ajax({ 
-                    url:     "send3.php", //Адрес подгружаемой страницы 
-                    type:     "POST", //Тип запроса 
-                    dataType: "html", //Тип данных 
-                    data: jQuery("#"+form3).serialize(),  
-                    success: function(response) { //Если все нормально 
-                    document.getElementById(result_id).innerHTML = response; 
-                }, 
-                error: function(response) { //Если ошибка 
-                document.getElementById(result_id).innerHTML = "Ошибка при отправке формы"; 
-                } 
-             }); 
-        }
-</script>
-
-<script language="JavaScript">
- <!-- 
-function isValidEmailAddress ( str )  {
-//   проверяет  не осталось ли поле пустым 
-if (str == " ") { 
-alert ("Введите e-mail, пожалуйста.") 
-return false 
-} 
-//   проверяет наличи  '@' 
-else if ( str. indexOf ( "@" , 4) == -1 ) { 
-alert("Error: Вы внесли  " + str + ". Ваш электронный адрес не содержит в себе '@' ." ) ; 
-return false 
-} 
- //  проверяет наличие 'точки'
-else if ( str. indexOf ( "." , 7) == -1 ) { 
-alert("Error:  Вы внесли " + str + ". Ваш электронный адрес не содержит в себе '.' ." ) ; 
-return false 
-}
-return true 
-}
---></script>
-
-<script type="text/javascript">
-$(function openPopupWin() {
-	$('#letter').click(function () {
-	
-		valid = true;
- 		if ( document.form1.tel.value == "Введите телефон") {
-		$('div.wrongs').fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return true;}
-			
-		else {
-			AjaxFormRequest('form1', 'send.php');
-			return false;
-		}			
-	});
-	
-	$('#letter2').click(function () {
-	
-		valid = true;
- 		if ( document.form2.tel2.value == "Телефон") {
-		$('div.wrongs2').fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return true;}
-			
-		else {
-		AjaxFormRequest2('form2', 'send2.php');
-		$('div.reg_form2').fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;
-		
-			}			
-	});
-	
-	$('#letter3').click(function () {
-	
-		valid = true;
- 		if ( document.form3.tel3.value == "Введите телефон") {
-		$('div.wrongs3').fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return true;}
-			
-		else {
-		AjaxFormRequest3('form3', 'send3.php');
-		$('div.reg_form3').fadeIn(500);
-		$("body").append("<div id='overlay'></div>");
-		$('#overlay').show().css({'filter' : 'alpha(opacity=80)'});
-		return false;
-		
-			}			
-	});
-	
-	$('a.close').click(function () {
-		$(this).parent().fadeOut(100);
-		$('#overlay').remove('#overlay');
-		return false;
-	});
-	$('a.close2').click(function () {
-		$(this).parent().fadeOut(100);
-		return false;
-	});
-	
-});
-
-</script>
 </head>
 
 <body>
@@ -182,33 +17,24 @@ $(function openPopupWin() {
         <div id="txttop">Поставляем реле Schrack<br />по всей России!</div>
         <div id="arrowtop"></div>
         <div id="phone">8 812 336 60 38<br /><span style=" font-size:20px;">Звоните - поможем!</span></div>
-        <div id="btn"><a href="#" class="show_popup" rel="calling">Обратный звонок</a></div>
+        <div id="btn"><a href="mailto:info@scrk.ru">info@scrk.ru</a></div>
     </div>
 </div>
 
 <!-- Слайдер -->
 <div id="topslider" style=" position:relative;">
-<div id="maindiv">
-<div id="scontent">
-	<div id="two">2 года гарантии</div>
-    <div id="sltitle">Реле schrack<br />с доставкой по всей россии</div>
-    <div id="slsub">Заявка на бесплатную консультацию</div>
-    <div id="slform">
-    	<form name="form3" id="form3" method="get" action="send3.php">
-        	<input type="text" value="Введите Ваше имя" class="style" name="name3" size="15" id="botname" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите Ваше имя';"/>
-			<input type="text" value="Введите телефон" class="style" name="tel3" maxlength="12"  size="18" id="bottel3" onkeyup="validPhone3()" onfocus="this.value = ''" onblur="if(this.value=='') this.value='Введите телефон';"/>
-			<input type="button" value="Отправить заявку" onclick="openPopupWin()" name="popupWin" id="letter3"><a rel="reg_form"></a></input>
-        </form>
-    </div>
-</div>
-</div>
+	<div id="maindiv">
+		<div id="scontent">
+    		<div id="sltitle">Реле schrack technik<br />с доставкой по всей россии</div>
+    	</div>
+	</div>
 
-<div id="nextbutton"></div><div id="prewbutton"></div>
+
 <div id="section" class="section">
 		<div id="slider" style="background: url(images/img-1.jpg) top center " class="slide"> </div>
         <div id="slider" style="background: url(images/img-2.jpg) top center " class="slide"> </div>
 </div>
-<div class="sli-links" id="control"><span class="control-slide active"></span><span class="control-slide"></span></div>
+
 </div>
 
 <div id="maindiv" style=" position:relative;">
